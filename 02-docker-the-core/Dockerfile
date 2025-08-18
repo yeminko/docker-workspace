@@ -4,11 +4,14 @@ FROM node
 # Define the working directory inside the container
 WORKDIR /app 
 
-# Can also write COPY . . (because the WORKDIR is set)
-COPY . /app
+# For optimizing the build process
+COPY package.json /app
 
 # This will run under the defined WORKDIR folder
 RUN npm install 
+
+# Can also write COPY . . (because the WORKDIR is set)
+COPY . /app
 
 # To expose port into local machine
 EXPOSE 80
