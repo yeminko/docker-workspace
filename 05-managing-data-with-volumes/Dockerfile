@@ -10,6 +10,7 @@ COPY . .
 
 EXPOSE 80
 
-VOLUME [ "/app/feedback" ]
+# Commented out - because Volume can't be named in Dockerfile
+# VOLUME [ "/app/feedback" ]
 
-CMD ["node", "server.js"]
+CMD ["node", "server.js"] 
