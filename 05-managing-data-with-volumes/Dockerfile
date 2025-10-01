@@ -13,4 +13,4 @@ EXPOSE 80
 # Commented out - because Volume can't be named in Dockerfile
 # VOLUME [ "/app/feedback" ]
 
-CMD ["node", "server.js"] 
+CMD ["npm", "start"] 
