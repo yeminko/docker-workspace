@@ -67,17 +67,14 @@ app.get("/people", async (req, res) => {
   }
 });
 
-// For temp testing purposes
-app.listen(3000);
-
-// mongoose.connect(
-//   "mongodb://localhost:27017/swfavorites",
-//   { useNewUrlParser: true },
-//   (err) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       app.listen(3000);
-//     }
-//   }
-// );
+mongoose.connect(
+  "mongodb://172.17.0.2:27017/swfavorites",
+  { useNewUrlParser: true },
+  (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      app.listen(3000);
+    }
+  }
+);
