@@ -4,3 +4,16 @@ metadata:
   name: second-app-deployment
 spec:
   replicas: 1
+  selector:
+    matchLabels: # Label selector to identify pods managed by this deployment
+      app: second-app
+      tier: backend # multi label selector
+  template:
+    metadata:
+      labels:
+        app: second-app
+        tier: backend
+    spec:
+      containers:
+        - name: second-node
+          image: yeminko/kub-first-app:2
