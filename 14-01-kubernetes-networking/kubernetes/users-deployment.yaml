@@ -14,4 +14,7 @@ spec:
     spec:
       containers:
         - name: users
-          image: yeminko/kub-demo-users
+          image: yeminko/kub-demo-users:latest
+          env:
+            - name: AUTH_ADDRESS
+              value: "10.97.190.230"
