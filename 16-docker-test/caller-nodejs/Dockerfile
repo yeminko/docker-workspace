@@ -4,9 +4,6 @@ FROM node:24-alpine
 # Define the working directory inside the container
 WORKDIR /app
 
-# Define a volume to persist data outside the container
-# VOLUME ["/app/test.txt"]
-
 # For optimizing the build process
 COPY package.json .
 
@@ -17,7 +14,7 @@ RUN npm install
 COPY . .
 
 # To expose port into local machine (Just for documentation purposes)
-EXPOSE 3000
+EXPOSE 4000
 
 # CMD make run the command when the container starts (not during the image build)
 CMD ["node", "index.js"]
