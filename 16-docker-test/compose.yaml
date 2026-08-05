@@ -1,0 +1,11 @@
+services:
+  simple-nodejs:
+    build: ./simple-nodejs
+    image: simple-node:latest
+    container_name: simple-nodejs
+  caller-nodejs:
+    build: ./caller-nodejs
+    image: caller-node:latest
+    container_name: caller-nodejs
+    ports:
+      - "4000:4000"

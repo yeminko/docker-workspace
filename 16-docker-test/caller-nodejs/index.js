@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  fetch("http://my-app:3000")
+  fetch("http://simple-nodejs:3000")
+    // fetch("http://my-app:3000")
     // fetch("http://host.docker.internal:3000")
     .then((response) => response.text())
     .then((data) => {

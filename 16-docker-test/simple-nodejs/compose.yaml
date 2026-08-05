@@ -4,9 +4,11 @@ services:
     image: simple-node:latest
     container_name: my-app
     ports:
-      - "3000:3000"
+      - "3000:4000"
     volumes:
       - data:/app/data
+    env_file:
+      - ./.env
 
 volumes:
   data:
